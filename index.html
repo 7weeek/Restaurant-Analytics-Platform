@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RestaurantIQ — an end-to-end restaurant analytics and business intelligence platform.">
+  <title>RestaurantIQ — Restaurant Analytics Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#top" class="brand"><span class="brand-mark">R</span> RestaurantIQ</a>
+    <div class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#analytics">Analytics</a>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="pulse"></span> Business Intelligence Platform</div>
+        <h1>Turn scattered restaurant data into <em>decisions.</em></h1>
+        <p class="hero-copy">
+          RestaurantIQ is an end-to-end analytics platform that brings together operational
+          data, automated ETL, SQL analytics, and interactive Power BI reporting.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#workflow">Explore the workflow <span>↓</span></a>
+          <a class="button secondary" href="#architecture">View architecture</a>
+        </div>
+        <div class="hero-stack">
+          <span>Python</span><i>·</i><span>Pandas</span><i>·</i><span>PostgreSQL</span><i>·</i><span>SQL</span><i>·</i><span>Power BI</span><i>·</i><span>Streamlit</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-label">01 — The problem</div>
+      <div class="two-col">
+        <div>
+          <h2>Restaurant data rarely arrives in one clean place.</h2>
+        </div>
+        <div class="body-large">
+          <p>
+            Orders, customers, restaurants, deliveries, payments and reviews can live in
+            separate files and systems. Before useful analysis can happen, the data has to
+            be validated, cleaned, transformed and brought together.
+          </p>
+          <p>
+            RestaurantIQ turns that messy process into a repeatable analytics workflow.
+          </p>
+        </div>
+      </div>
+
+      <div class="data-cards">
+        <div class="data-card"><span class="card-icon">01</span><strong>Orders</strong><small>Transactions & revenue</small></div>
+        <div class="data-card"><span class="card-icon">02</span><strong>Customers</strong><small>Profiles & behavior</small></div>
+        <div class="data-card"><span class="card-icon">03</span><strong>Restaurants</strong><small>Performance & cuisine</small></div>
+        <div class="data-card"><span class="card-icon">04</span><strong>Deliveries</strong><small>Speed & operations</small></div>
+        <div class="data-card"><span class="card-icon">05</span><strong>Payments</strong><small>Methods & outcomes</small></div>
+        <div class="data-card"><span class="card-icon">06</span><strong>Reviews</strong><small>Ratings & feedback</small></div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="workflow">
+      <div class="section dark-label">02 — The workflow</div>
+      <div class="dark-intro">
+        <h2>From raw files to business intelligence.</h2>
+        <p>A simple ingestion-to-insight pipeline designed around the way analytics teams actually work.</p>
+      </div>
+
+      <div class="workflow">
+        <div class="workflow-line"></div>
+        <div class="workflow-step">
+          <div class="step-num">01</div>
+          <div class="step-box">
+            <span class="step-tag">INPUT</span>
+            <h3>Upload data</h3>
+            <p>CSV / Excel files from different business functions enter through the data management portal.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">02</div>
+          <div class="step-box">
+            <span class="step-tag">QUALITY</span>
+            <h3>Validate</h3>
+            <p>Schema checks, data types, missing values, duplicates and relationship consistency are checked.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">03</div>
+          <div class="step-box">
+            <span class="step-tag">ETL</span>
+            <h3>Clean & transform</h3>
+            <p>Pandas processes the incoming datasets and prepares them for centralized analytics.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">04</div>
+          <div class="step-box">
+            <span class="step-tag">STORE</span>
+            <h3>PostgreSQL</h3>
+            <p>Cleaned data is organized into a centralized relational database for reliable querying.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">05</div>
+          <div class="step-box">
+            <span class="step-tag">INSIGHT</span>
+            <h3>Power BI</h3>
+            <p>SQL-backed analytical models and DAX measures turn the data into interactive business dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="section-label">03 — Architecture</div>
+      <div class="two-col architecture-intro">
+        <h2>Every layer has a job.</h2>
+        <p class="body-large">The platform separates ingestion, processing, storage, analytics and visualization instead of putting everything into one dashboard.</p>
+      </div>
+
+      <div class="architecture">
+        <div class="arch-node input-node">
+          <span class="node-kicker">01</span>
+          <h3>Data sources</h3>
+          <p>CSV / Excel</p>
+          <div class="mini-files"><span>Orders</span><span>Customers</span><span>Reviews</span></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="node-kicker">02</span>
+          <h3>Streamlit</h3>
+          <p>Data management portal</p>
+          <div class="mini-files"><span>Upload</span><span>Validate</span><span>Process</span></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node featured">
+          <span class="node-kicker">03</span>
+          <h3>Python + Pandas</h3>
+          <p>ETL & data quality</p>
+          <div class="mini-files"><span>Clean</span><span>Transform</span><span>Load</span></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="node-kicker">04</span>
+          <h3>PostgreSQL</h3>
+          <p>Central data layer</p>
+          <div class="mini-files"><span>Tables</span><span>Views</span><span>SQL</span></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node output-node">
+          <span class="node-kicker">05</span>
+          <h3>Power BI</h3>
+          <p>Business intelligence</p>
+          <div class="mini-files"><span>DAX</span><span>KPI</span><span>Dashboards</span></div>
+        </div>
+      </div>
+
+      <div class="architecture-note">
+        <span>Why this architecture?</span>
+        <p>Raw data can change without rebuilding the dashboard. The database becomes the central source of truth, while Power BI focuses on modeling, measures and visualization.</p>
+      </div>
+    </section>
+
+
+    <section class="section showcase-section" id="demo-flow">
+      <div class="section-label">04 — From files to platform</div>
+      <div class="showcase-heading">
+        <div>
+          <h2>Raw business files become a usable analytics system.</h2>
+        </div>
+        <p>Teams can provide familiar CSV/Excel files. RestaurantIQ handles the ingestion and processing before the data reaches the analytics layer.</p>
+      </div>
+
+      <div class="file-showcase">
+        <div class="file-preview">
+          <div class="file-top">
+            <span class="excel-icon">X</span>
+            <div><strong>orders.xlsx</strong><small>Excel workbook · 18,421 rows</small></div>
+          </div>
+          <div class="sheet">
+            <div class="sheet-row sheet-head"><span>order_id</span><span>customer_id</span><span>restaurant_id</span><span>amount</span></div>
+            <div class="sheet-row"><span>ORD10482</span><span>C00821</span><span>R014</span><span>₹842</span></div>
+            <div class="sheet-row"><span>ORD10483</span><span>C00319</span><span>R077</span><span>₹426</span></div>
+            <div class="sheet-row"><span>ORD10484</span><span>C01402</span><span>R031</span><span>₹1,120</span></div>
+          </div>
+        </div>
+
+        <div class="file-preview">
+          <div class="file-top">
+            <span class="excel-icon">X</span>
+            <div><strong>restaurants.xlsx</strong><small>Excel workbook · 152 rows</small></div>
+          </div>
+          <div class="sheet">
+            <div class="sheet-row sheet-head"><span>restaurant_id</span><span>name</span><span>city</span><span>cuisine</span></div>
+            <div class="sheet-row"><span>R014</span><span>Urban Spice</span><span>Delhi</span><span>North Indian</span></div>
+            <div class="sheet-row"><span>R077</span><span>Wok House</span><span>Mumbai</span><span>Chinese</span></div>
+            <div class="sheet-row"><span>R031</span><span>Crust & Co.</span><span>Pune</span><span>Pizza</span></div>
+          </div>
+        </div>
+
+        <div class="file-preview">
+          <div class="file-top">
+            <span class="excel-icon">X</span>
+            <div><strong>deliveries.xlsx</strong><small>Excel workbook · 18,421 rows</small></div>
+          </div>
+          <div class="sheet">
+            <div class="sheet-row sheet-head"><span>order_id</span><span>rider_id</span><span>minutes</span><span>status</span></div>
+            <div class="sheet-row"><span>ORD10482</span><span>RD091</span><span>31</span><span>Delivered</span></div>
+            <div class="sheet-row"><span>ORD10483</span><span>RD027</span><span>46</span><span>Delivered</span></div>
+            <div class="sheet-row"><span>ORD10484</span><span>RD114</span><span>28</span><span>Delivered</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-arrow">↓</div>
+
+      <div class="streamlit-preview">
+        <div class="streamlit-copy">
+          <span class="step-tag light-tag">DATA MANAGEMENT PORTAL</span>
+          <h3>Upload. Validate. Process.</h3>
+          <p>The Streamlit application acts as the entry point for business data. It validates incoming files, runs the ETL workflow and reports the processing status before the database is updated.</p>
+          <div class="portal-points">
+            <span>✓ File validation</span>
+            <span>✓ Data quality checks</span>
+            <span>✓ ETL processing</span>
+            <span>✓ Database update</span>
+          </div>
+        </div>
+        <div class="streamlit-image">
+          <img src="streamlit.jpg" alt="RestaurantIQ Streamlit data management portal preview">
+          <div class="image-fallback">streamlit.jpg<br><small>Add the screenshot to the project folder</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section analytics-section" id="analytics">
+      <div class="section-label">04 — Analytics</div>
+      <div class="analytics-heading">
+        <h2>Built around business questions.</h2>
+        <p>Not just charts. The platform is designed to help answer the questions a restaurant operations team would actually ask.</p>
+      </div>
+
+      <div class="analytics-grid">
+        <article class="analytics-card large">
+          <span>01</span>
+          <h3>Sales & Revenue</h3>
+          <p>Revenue trends, order volume, average order value, city performance and restaurant contribution.</p>
+          <div class="fake-chart bars"><i style="height:38%"></i><i style="height:58%"></i><i style="height:47%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:88%"></i><i style="height:78%"></i></div>
+        </article>
+        <article class="analytics-card">
+          <span>02</span>
+          <h3>Customer Behavior</h3>
+          <p>New vs returning customers, order frequency, retention and high-value segments.</p>
+          <div class="fake-line"><svg viewBox="0 0 300 90" preserveAspectRatio="none"><polyline points="0,72 42,58 78,63 116,36 152,47 192,22 228,31 270,12 300,18"/></svg></div>
+        </article>
+        <article class="analytics-card">
+          <span>03</span>
+          <h3>Delivery Performance</h3>
+          <p>Average delivery time, late deliveries, peak periods and city-level bottlenecks.</p>
+          <div class="metric-row"><strong>32m</strong><small>avg. delivery</small><strong>91%</strong><small>on-time</small></div>
+        </article>
+        <article class="analytics-card">
+          <span>04</span>
+          <h3>Restaurant Operations</h3>
+          <p>Restaurant rankings, ratings, cuisine trends, order contribution and performance.</p>
+          <div class="rank-list"><div><b>01</b> Restaurant A <em>94%</em></div><div><b>02</b> Restaurant B <em>88%</em></div><div><b>03</b> Restaurant C <em>82%</em></div></div>
+        </article>
+        <article class="analytics-card">
+          <span>05</span>
+          <h3>Business KPIs</h3>
+          <p>Interactive Power BI reporting with reusable measures, filters and drill-down analysis.</p>
+          <div class="kpi-row"><div><strong>₹24.8M</strong><small>Revenue</small></div><div><strong>148K</strong><small>Orders</small></div><div><strong>4.3</strong><small>Rating</small></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section stack-section">
+      <div class="section dark-label">05 — Technology</div>
+      <div class="stack-heading">
+        <h2>A focused analytics stack.</h2>
+        <p>Each technology is used for a specific part of the workflow.</p>
+      </div>
+      <div class="tech-grid">
+        <div><strong>Python</strong><span>Core processing</span></div>
+        <div><strong>Pandas</strong><span>Data cleaning & ETL</span></div>
+        <div><strong>PostgreSQL</strong><span>Central data store</span></div>
+        <div><strong>SQL</strong><span>Analytical queries</span></div>
+        <div><strong>Power BI</strong><span>Dashboards</span></div>
+        <div><strong>DAX</strong><span>Measures & KPIs</span></div>
+        <div><strong>Power Query</strong><span>Data transformation</span></div>
+        <div><strong>Streamlit</strong><span>Data management portal</span></div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="demo-card">
+        <div>
+          <div class="section-label">06 — Live project</div>
+          <h2>The walkthrough lives here.<br><span>The analytics portal comes next.</span></h2>
+          <p>The project is being built in stages. This page documents the final system; the Streamlit portal will provide the hands-on data ingestion experience once the ETL layer is connected.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div><span class="brand-mark small">R</span> RestaurantIQ</div>
+    <span>Restaurant Analytics & Business Intelligence Platform</span>
+    <span>Built as an end-to-end analytics case study.</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.section, .dark-section, .analytics-card, .data-card, .arch-node').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
