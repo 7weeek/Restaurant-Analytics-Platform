@@ -142,21 +142,4 @@ The repository structure can be expanded as each part of the platform is impleme
 
 The project walkthrough website documents the architecture, workflow, data sources, analytics use cases, and technology stack.
 
-The website is a presentation layer only; the actual data processing and analytics components are built separately.
-
-## Current Status
-
-- [x] Project concept and architecture
-- [x] Project walkthrough website
-- [x] Sample analytical dataset
-- [ ] Streamlit ingestion portal
-- [ ] Data validation layer
-- [ ] PostgreSQL integration
-- [ ] Production ETL pipeline
-- [ ] SQL analytics layer
-- [ ] Power BI dashboard
-- [ ] End-to-end integration
-
-## Goal
-
-The goal of RestaurantIQ is to demonstrate a realistic end-to-end analytics workflow rather than a standalone dashboard — starting from raw business files and ending with interactive business intelligence reporting.
+The website is a presentation layer only; 
