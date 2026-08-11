@@ -113,29 +113,6 @@ The Power BI layer is designed around practical business questions, including:
 - **DAX** — calculated measures and KPIs
 - **Power Query** — data transformation where required
 
-## Repository Structure
-
-```text
-RestaurantIQ/
-│
-├── index.html
-├── style.css
-├── streamlit.jpg
-├── README.md
-│
-├── streamlit/
-│   └── ...
-│
-├── etl/
-│   └── ...
-│
-├── sql/
-│   └── ...
-│
-└── powerbi/
-    └── ...
-```
-
 The repository structure can be expanded as each part of the platform is implemented.
 
 ## Project Website
