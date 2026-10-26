@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 import pandas as pd
 
@@ -201,4 +200,3 @@ else:
 
 st.divider()
 st.caption("RestaurantIQ · Data ingestion and analytics")
-```
