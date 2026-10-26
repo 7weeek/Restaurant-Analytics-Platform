@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RestaurantIQ — an end-to-end restaurant analytics and business intelligence platform.">
+  <meta name="description" content="RestaurantIQ — a working end-to-end restaurant analytics platform with Streamlit data ingestion, Neon PostgreSQL storage, and Power BI reporting.">
   <title>RestaurantIQ — Restaurant Analytics Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,67 +16,148 @@
     <a href="#top" class="brand"><span class="brand-mark">R</span> RestaurantIQ</a>
     <div class="nav-links">
       <a href="#overview">Overview</a>
+      <a href="#explore">Platform</a>
       <a href="#workflow">Workflow</a>
       <a href="#architecture">Architecture</a>
       <a href="#analytics">Analytics</a>
     </div>
+    <a class="nav-cta" href="https://restaurant-analytics-platform-7week.streamlit.app/" target="_blank" rel="noopener">Open Uploader ↗</a>
   </nav>
 
   <main id="top">
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-glow glow-one"></div>
       <div class="hero-glow glow-two"></div>
       <div class="hero-inner">
-        <div class="eyebrow"><span class="pulse"></span> Business Intelligence Platform</div>
+        <div class="eyebrow"><span class="pulse"></span> Working End-to-End Analytics Platform</div>
         <h1>Turn scattered restaurant data into <em>decisions.</em></h1>
         <p class="hero-copy">
-          RestaurantIQ is an end-to-end analytics platform that brings together operational
-          data, automated ETL, SQL analytics, and interactive Power BI reporting.
+          RestaurantIQ is a deployed analytics platform: upload CSV or Excel files through the
+          Streamlit portal, validate and store records in Neon PostgreSQL, and explore results
+          through an interactive Power BI dashboard.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#workflow">Explore the workflow <span>↓</span></a>
-          <a class="button secondary" href="#architecture">View architecture</a>
+          <a class="button primary" href="https://restaurant-analytics-platform-7week.streamlit.app/" target="_blank" rel="noopener">Open Data Uploader <span>&#8599;</span></a>
+          <a class="button secondary" href="#explore">Explore the platform</a>
         </div>
         <div class="hero-stack">
-          <span>Python</span><i>·</i><span>Pandas</span><i>·</i><span>PostgreSQL</span><i>·</i><span>SQL</span><i>·</i><span>Power BI</span><i>·</i><span>Streamlit</span>
+          <span>Python</span><i>&middot;</i><span>Pandas</span><i>&middot;</i><span>Neon PostgreSQL</span><i>&middot;</i><span>Power BI</span><i>&middot;</i><span>Streamlit</span>
         </div>
       </div>
     </section>
 
+    <!-- 01 OVERVIEW -->
     <section class="section" id="overview">
-      <div class="section-label">01 — The problem</div>
+      <div class="section-label">01 &mdash; The problem</div>
       <div class="two-col">
         <div>
           <h2>Restaurant data rarely arrives in one clean place.</h2>
         </div>
         <div class="body-large">
           <p>
-            Orders, customers, restaurants, deliveries, payments and reviews can live in
-            separate files and systems. Before useful analysis can happen, the data has to
-            be validated, cleaned, transformed and brought together.
+            Orders, ratings, revenue and operational records often live in separate files
+            across different teams. Before useful analysis can happen, the data has to be
+            validated, deduplicated and loaded into one central location.
           </p>
           <p>
-            RestaurantIQ turns that messy process into a repeatable analytics workflow.
+            RestaurantIQ turns that messy process into a repeatable, end-to-end analytics workflow &mdash; from file upload to interactive dashboard.
           </p>
         </div>
       </div>
 
       <div class="data-cards">
-        <div class="data-card"><span class="card-icon">01</span><strong>Orders</strong><small>Transactions & revenue</small></div>
-        <div class="data-card"><span class="card-icon">02</span><strong>Customers</strong><small>Profiles & behavior</small></div>
-        <div class="data-card"><span class="card-icon">03</span><strong>Restaurants</strong><small>Performance & cuisine</small></div>
-        <div class="data-card"><span class="card-icon">04</span><strong>Deliveries</strong><small>Speed & operations</small></div>
-        <div class="data-card"><span class="card-icon">05</span><strong>Payments</strong><small>Methods & outcomes</small></div>
-        <div class="data-card"><span class="card-icon">06</span><strong>Reviews</strong><small>Ratings & feedback</small></div>
+        <div class="data-card"><span class="card-icon">01</span><strong>Orders</strong><small>Transactions &amp; revenue</small></div>
+        <div class="data-card"><span class="card-icon">02</span><strong>Customers</strong><small>Profiles &amp; behavior</small></div>
+        <div class="data-card"><span class="card-icon">03</span><strong>Restaurants</strong><small>Performance &amp; cuisine</small></div>
+        <div class="data-card"><span class="card-icon">04</span><strong>Ratings</strong><small>Scores &amp; feedback</small></div>
+        <div class="data-card"><span class="card-icon">05</span><strong>Order Status</strong><small>Delivered, cancelled, pending</small></div>
+        <div class="data-card"><span class="card-icon">06</span><strong>Price Tiers</strong><small>Category analysis</small></div>
       </div>
     </section>
 
+    <!-- 02 EXPLORE THE PLATFORM -->
+    <section class="section explore-section" id="explore">
+      <div class="section-label">02 &mdash; Live applications</div>
+      <div class="explore-heading">
+        <div>
+          <h2>Explore the Platform.</h2>
+        </div>
+        <p>Two deployed applications &mdash; one for data ingestion, one for analytics. Both are live and working today.</p>
+      </div>
+
+      <div class="app-cards">
+
+        <!-- Card A: Power BI Dashboard -->
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-badge powerbi-badge">Power BI &middot; Analytics</div>
+            <h3>Restaurant Analytics Dashboard</h3>
+            <p>
+              Interactive analysis of restaurant revenue, order trends, city-level performance,
+              ratings, order status breakdowns and price category patterns. Built with DAX measures
+              and interactive slicers for drill-down exploration.
+            </p>
+            <p class="app-note">
+              <span class="note-icon">i</span>
+              Power BI uses Import mode. New database records appear in the report after the dataset is manually refreshed.
+            </p>
+          </div>
+          <div class="app-screenshot-wrap">
+            <img
+              src="dashboard_image.png"
+              alt="RestaurantIQ Power BI Analytics Dashboard screenshot"
+              class="app-screenshot"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            >
+            <div class="screenshot-fallback" style="display:none">
+              <span class="fallback-icon">&#128202;</span>
+              <p>Dashboard screenshot<br><small>dashboard_image.png</small></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card B: Streamlit Uploader -->
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-badge streamlit-badge">Streamlit &middot; Live</div>
+            <h3>Data Ingestion Portal</h3>
+            <p>
+              Upload CSV or Excel files, combine compatible datasets, validate the expected schema
+              and column types, check for duplicate order IDs, and insert new records directly
+              into Neon PostgreSQL.
+            </p>
+            <a
+              class="button primary uploader-btn"
+              href="https://restaurant-analytics-platform-7week.streamlit.app/"
+              target="_blank"
+              rel="noopener"
+            >Open Data Uploader &#8599;</a>
+          </div>
+          <div class="app-screenshot-wrap">
+            <img
+              src="uploader_image.png"
+              alt="RestaurantIQ Streamlit Data Ingestion Portal screenshot"
+              class="app-screenshot"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            >
+            <div class="screenshot-fallback" style="display:none">
+              <span class="fallback-icon">&#128228;</span>
+              <p>Uploader screenshot<br><small>uploader_image.png</small></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03 WORKFLOW -->
     <section class="dark-section" id="workflow">
-      <div class="section dark-label">02 — The workflow</div>
+      <div class="section dark-label">03 &mdash; The workflow</div>
       <div class="dark-intro">
         <h2>From raw files to business intelligence.</h2>
-        <p>A simple ingestion-to-insight pipeline designed around the way analytics teams actually work.</p>
+        <p>Five steps &mdash; three automatic, two user-triggered &mdash; take data from CSV upload to an updated Power BI report.</p>
       </div>
 
       <div class="workflow">
@@ -84,233 +165,175 @@
         <div class="workflow-step">
           <div class="step-num">01</div>
           <div class="step-box">
-            <span class="step-tag">INPUT</span>
-            <h3>Upload data</h3>
-            <p>CSV / Excel files from different business functions enter through the data management portal.</p>
+            <span class="step-tag">INPUT &middot; User action</span>
+            <h3>Upload data files</h3>
+            <p>Open the Streamlit portal and upload one or more compatible CSV or Excel files. Multiple files can be combined in a single session.</p>
           </div>
         </div>
         <div class="workflow-step">
           <div class="step-num">02</div>
           <div class="step-box">
-            <span class="step-tag">QUALITY</span>
-            <h3>Validate</h3>
-            <p>Schema checks, data types, missing values, duplicates and relationship consistency are checked.</p>
+            <span class="step-tag">PROCESSING &middot; Automatic</span>
+            <h3>Combine &amp; validate</h3>
+            <p>Python and Pandas merge compatible files, verify expected column names and data types, and flag any rows that fail validation before proceeding.</p>
           </div>
         </div>
         <div class="workflow-step">
           <div class="step-num">03</div>
           <div class="step-box">
-            <span class="step-tag">ETL</span>
-            <h3>Clean & transform</h3>
-            <p>Pandas processes the incoming datasets and prepares them for centralized analytics.</p>
+            <span class="step-tag">QUALITY &middot; Automatic</span>
+            <h3>Deduplicate</h3>
+            <p>The portal cross-references incoming order IDs against records already in the database and surfaces any duplicates so they are not re-inserted.</p>
           </div>
         </div>
         <div class="workflow-step">
           <div class="step-num">04</div>
           <div class="step-box">
-            <span class="step-tag">STORE</span>
-            <h3>PostgreSQL</h3>
-            <p>Cleaned data is organized into a centralized relational database for reliable querying.</p>
+            <span class="step-tag">STORE &middot; Automatic</span>
+            <h3>Insert into Neon PostgreSQL</h3>
+            <p>New, validated records are written to the Neon-hosted PostgreSQL database &mdash; the central source of truth for the entire platform.</p>
           </div>
         </div>
         <div class="workflow-step">
           <div class="step-num">05</div>
           <div class="step-box">
-            <span class="step-tag">INSIGHT</span>
-            <h3>Power BI</h3>
-            <p>SQL-backed analytical models and DAX measures turn the data into interactive business dashboards.</p>
+            <span class="step-tag">VISUALIZE &middot; User action</span>
+            <h3>Refresh Power BI</h3>
+            <p>Trigger a dataset refresh in Power BI Desktop or the Power BI Service. The dashboard then reflects the latest records from PostgreSQL.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 04 ARCHITECTURE -->
     <section class="section" id="architecture">
-      <div class="section-label">03 — Architecture</div>
+      <div class="section-label">04 &mdash; Architecture</div>
       <div class="two-col architecture-intro">
         <h2>Every layer has a job.</h2>
-        <p class="body-large">The platform separates ingestion, processing, storage, analytics and visualization instead of putting everything into one dashboard.</p>
+        <p class="body-large">The platform separates ingestion, processing, storage and visualization so each layer can be understood and improved independently.</p>
       </div>
 
       <div class="architecture">
         <div class="arch-node input-node">
-          <span class="node-kicker">01</span>
-          <h3>Data sources</h3>
-          <p>CSV / Excel</p>
-          <div class="mini-files"><span>Orders</span><span>Customers</span><span>Reviews</span></div>
+          <span class="node-kicker">01 &middot; INGESTION</span>
+          <h3>CSV / Excel</h3>
+          <p>Source files uploaded by the user</p>
+          <div class="mini-files"><span>Orders</span><span>Customers</span><span>Restaurants</span></div>
         </div>
-        <div class="arch-arrow">→</div>
+        <div class="arch-arrow">&rarr;</div>
         <div class="arch-node">
-          <span class="node-kicker">02</span>
+          <span class="node-kicker">02 &middot; PORTAL</span>
           <h3>Streamlit</h3>
-          <p>Data management portal</p>
-          <div class="mini-files"><span>Upload</span><span>Validate</span><span>Process</span></div>
+          <p>Upload UI, drives the ingestion flow</p>
+          <div class="mini-files"><span>Upload</span><span>Combine</span><span>Status</span></div>
         </div>
-        <div class="arch-arrow">→</div>
+        <div class="arch-arrow">&rarr;</div>
         <div class="arch-node featured">
-          <span class="node-kicker">03</span>
+          <span class="node-kicker">03 &middot; PROCESSING</span>
           <h3>Python + Pandas</h3>
-          <p>ETL & data quality</p>
-          <div class="mini-files"><span>Clean</span><span>Transform</span><span>Load</span></div>
+          <p>Validates schema, deduplicates, prepares records</p>
+          <div class="mini-files"><span>Validate</span><span>Dedupe</span><span>Transform</span></div>
         </div>
-        <div class="arch-arrow">→</div>
+        <div class="arch-arrow">&rarr;</div>
         <div class="arch-node">
-          <span class="node-kicker">04</span>
-          <h3>PostgreSQL</h3>
-          <p>Central data layer</p>
-          <div class="mini-files"><span>Tables</span><span>Views</span><span>SQL</span></div>
+          <span class="node-kicker">04 &middot; STORAGE</span>
+          <h3>Neon PostgreSQL</h3>
+          <p>Cloud-hosted relational database</p>
+          <div class="mini-files"><span>Tables</span><span>SQL</span><span>Neon</span></div>
         </div>
-        <div class="arch-arrow">→</div>
+        <div class="arch-arrow">&rarr;</div>
         <div class="arch-node output-node">
-          <span class="node-kicker">05</span>
+          <span class="node-kicker">05 &middot; VISUALIZATION</span>
           <h3>Power BI</h3>
-          <p>Business intelligence</p>
-          <div class="mini-files"><span>DAX</span><span>KPI</span><span>Dashboards</span></div>
+          <p>Import mode, DAX measures, dashboard refresh</p>
+          <div class="mini-files"><span>DAX</span><span>KPIs</span><span>Slicers</span></div>
         </div>
       </div>
 
       <div class="architecture-note">
-        <span>Why this architecture?</span>
-        <p>Raw data can change without rebuilding the dashboard. The database becomes the central source of truth, while Power BI focuses on modeling, measures and visualization.</p>
+        <span>Refresh note</span>
+        <p>Power BI connects to PostgreSQL using Import mode. New records become visible in the dashboard after the dataset is manually refreshed &mdash; either in Power BI Desktop or through the Power BI Service. The pipeline is not real-time and does not refresh automatically on a schedule.</p>
       </div>
     </section>
 
-
-    <section class="section showcase-section" id="demo-flow">
-      <div class="section-label">04 — From files to platform</div>
-      <div class="showcase-heading">
-        <div>
-          <h2>Raw business files become a usable analytics system.</h2>
-        </div>
-        <p>Teams can provide familiar CSV/Excel files. RestaurantIQ handles the ingestion and processing before the data reaches the analytics layer.</p>
-      </div>
-
-      <div class="file-showcase">
-        <div class="file-preview">
-          <div class="file-top">
-            <span class="excel-icon">X</span>
-            <div><strong>orders.xlsx</strong><small>Excel workbook · 18,421 rows</small></div>
-          </div>
-          <div class="sheet">
-            <div class="sheet-row sheet-head"><span>order_id</span><span>customer_id</span><span>restaurant_id</span><span>amount</span></div>
-            <div class="sheet-row"><span>ORD10482</span><span>C00821</span><span>R014</span><span>₹842</span></div>
-            <div class="sheet-row"><span>ORD10483</span><span>C00319</span><span>R077</span><span>₹426</span></div>
-            <div class="sheet-row"><span>ORD10484</span><span>C01402</span><span>R031</span><span>₹1,120</span></div>
-          </div>
-        </div>
-
-        <div class="file-preview">
-          <div class="file-top">
-            <span class="excel-icon">X</span>
-            <div><strong>restaurants.xlsx</strong><small>Excel workbook · 152 rows</small></div>
-          </div>
-          <div class="sheet">
-            <div class="sheet-row sheet-head"><span>restaurant_id</span><span>name</span><span>city</span><span>cuisine</span></div>
-            <div class="sheet-row"><span>R014</span><span>Urban Spice</span><span>Delhi</span><span>North Indian</span></div>
-            <div class="sheet-row"><span>R077</span><span>Wok House</span><span>Mumbai</span><span>Chinese</span></div>
-            <div class="sheet-row"><span>R031</span><span>Crust & Co.</span><span>Pune</span><span>Pizza</span></div>
-          </div>
-        </div>
-
-        <div class="file-preview">
-          <div class="file-top">
-            <span class="excel-icon">X</span>
-            <div><strong>deliveries.xlsx</strong><small>Excel workbook · 18,421 rows</small></div>
-          </div>
-          <div class="sheet">
-            <div class="sheet-row sheet-head"><span>order_id</span><span>rider_id</span><span>minutes</span><span>status</span></div>
-            <div class="sheet-row"><span>ORD10482</span><span>RD091</span><span>31</span><span>Delivered</span></div>
-            <div class="sheet-row"><span>ORD10483</span><span>RD027</span><span>46</span><span>Delivered</span></div>
-            <div class="sheet-row"><span>ORD10484</span><span>RD114</span><span>28</span><span>Delivered</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase-arrow">↓</div>
-
-      <div class="streamlit-preview">
-        <div class="streamlit-copy">
-          <span class="step-tag light-tag">DATA MANAGEMENT PORTAL</span>
-          <h3>Upload. Validate. Process.</h3>
-          <p>The Streamlit application acts as the entry point for business data. It validates incoming files, runs the ETL workflow and reports the processing status before the database is updated.</p>
-          <div class="portal-points">
-            <span>✓ File validation</span>
-            <span>✓ Data quality checks</span>
-            <span>✓ ETL processing</span>
-            <span>✓ Database update</span>
-          </div>
-        </div>
-        <div class="streamlit-image">
-          <img src="streamlit.jpg" alt="RestaurantIQ Streamlit data management portal preview">
-          <div class="image-fallback">streamlit.jpg<br><small>Add the screenshot to the project folder</small></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- 05 ANALYTICS -->
     <section class="section analytics-section" id="analytics">
-      <div class="section-label">04 — Analytics</div>
+      <div class="section-label">05 &mdash; Analytics</div>
       <div class="analytics-heading">
         <h2>Built around business questions.</h2>
-        <p>Not just charts. The platform is designed to help answer the questions a restaurant operations team would actually ask.</p>
+        <p>The dashboard covers the metrics a restaurant operations team would actually want to explore, with slicers and filters for interactive drill-down.</p>
       </div>
 
       <div class="analytics-grid">
         <article class="analytics-card large">
           <span>01</span>
-          <h3>Sales & Revenue</h3>
-          <p>Revenue trends, order volume, average order value, city performance and restaurant contribution.</p>
+          <h3>Revenue &amp; Order Trends</h3>
+          <p>Total revenue, order volume and average order value segmented by city, restaurant and time period.</p>
           <div class="fake-chart bars"><i style="height:38%"></i><i style="height:58%"></i><i style="height:47%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:88%"></i><i style="height:78%"></i></div>
         </article>
         <article class="analytics-card">
           <span>02</span>
-          <h3>Customer Behavior</h3>
-          <p>New vs returning customers, order frequency, retention and high-value segments.</p>
+          <h3>City-Level Revenue</h3>
+          <p>Revenue contribution and order volume across cities to identify geographic performance differences.</p>
           <div class="fake-line"><svg viewBox="0 0 300 90" preserveAspectRatio="none"><polyline points="0,72 42,58 78,63 116,36 152,47 192,22 228,31 270,12 300,18"/></svg></div>
         </article>
         <article class="analytics-card">
           <span>03</span>
-          <h3>Delivery Performance</h3>
-          <p>Average delivery time, late deliveries, peak periods and city-level bottlenecks.</p>
-          <div class="metric-row"><strong>32m</strong><small>avg. delivery</small><strong>91%</strong><small>on-time</small></div>
+          <h3>Restaurant Ratings</h3>
+          <p>Average ratings per restaurant and distribution of rating scores across the dataset.</p>
+          <div class="ratings-display"><strong class="rating-big">4.3</strong><small>avg. rating across restaurants</small></div>
         </article>
         <article class="analytics-card">
           <span>04</span>
-          <h3>Restaurant Operations</h3>
-          <p>Restaurant rankings, ratings, cuisine trends, order contribution and performance.</p>
-          <div class="rank-list"><div><b>01</b> Restaurant A <em>94%</em></div><div><b>02</b> Restaurant B <em>88%</em></div><div><b>03</b> Restaurant C <em>82%</em></div></div>
+          <h3>Order Status</h3>
+          <p>Proportion of delivered, cancelled and pending orders with interactive slicer filters.</p>
+          <div class="status-pills">
+            <span class="pill delivered">&#10003; Delivered</span>
+            <span class="pill cancelled">&#10005; Cancelled</span>
+            <span class="pill pending">&#9679; Pending</span>
+          </div>
         </article>
         <article class="analytics-card">
           <span>05</span>
-          <h3>Business KPIs</h3>
-          <p>Interactive Power BI reporting with reusable measures, filters and drill-down analysis.</p>
-          <div class="kpi-row"><div><strong>₹24.8M</strong><small>Revenue</small></div><div><strong>148K</strong><small>Orders</small></div><div><strong>4.3</strong><small>Rating</small></div></div>
+          <h3>Price Category Analysis</h3>
+          <p>Order volume and revenue broken down by price category &mdash; budget, mid-range and premium segments.</p>
+          <div class="fake-chart bars" style="margin-top:28px"><i style="height:55%"></i><i style="height:85%"></i><i style="height:38%"></i></div>
         </article>
       </div>
+
+      <p class="analytics-disclaimer">Metrics in the dashboard reflect data loaded into the PostgreSQL database and are updated when the Power BI dataset is refreshed. No figures on this page represent live production statistics.</p>
     </section>
 
+    <!-- 06 TECHNOLOGY -->
     <section class="dark-section stack-section">
-      <div class="section dark-label">05 — Technology</div>
+      <div class="section dark-label">06 &mdash; Technology</div>
       <div class="stack-heading">
         <h2>A focused analytics stack.</h2>
-        <p>Each technology is used for a specific part of the workflow.</p>
+        <p>Each technology is responsible for a specific layer of the platform.</p>
       </div>
       <div class="tech-grid">
-        <div><strong>Python</strong><span>Core processing</span></div>
-        <div><strong>Pandas</strong><span>Data cleaning & ETL</span></div>
-        <div><strong>PostgreSQL</strong><span>Central data store</span></div>
-        <div><strong>SQL</strong><span>Analytical queries</span></div>
-        <div><strong>Power BI</strong><span>Dashboards</span></div>
-        <div><strong>DAX</strong><span>Measures & KPIs</span></div>
-        <div><strong>Power Query</strong><span>Data transformation</span></div>
-        <div><strong>Streamlit</strong><span>Data management portal</span></div>
+        <div><strong>Python</strong><span>Orchestration &amp; scripting</span></div>
+        <div><strong>Pandas</strong><span>Validation, deduplication &amp; ETL</span></div>
+        <div><strong>Streamlit</strong><span>Data ingestion portal &mdash; deployed</span></div>
+        <div><strong>Neon PostgreSQL</strong><span>Cloud-hosted central database</span></div>
+        <div><strong>Power BI</strong><span>Interactive analytics dashboard</span></div>
+        <div><strong>DAX</strong><span>Measures &amp; KPIs</span></div>
+        <div><strong>Power Query</strong><span>Import-mode data transformation</span></div>
+        <div><strong>Vercel</strong><span>Website hosting</span></div>
       </div>
     </section>
 
+    <!-- 07 CTA -->
     <section class="section demo-section" id="demo">
       <div class="demo-card">
         <div>
-          <div class="section-label">06 — Live project</div>
-          <h2>The walkthrough lives here.<br><span>The analytics portal comes next.</span></h2>
-          <p>The project is being built in stages. This page documents the final system; the Streamlit portal will provide the hands-on data ingestion experience once the ETL layer is connected.</p>
+          <div class="section-label">07 &mdash; Try it now</div>
+          <h2>The data uploader is live.<br><span>Open it and try an upload.</span></h2>
+          <p>Visit the Streamlit portal, upload a compatible CSV or Excel file, and watch the validation and deduplication steps run before records are written to Neon PostgreSQL.</p>
+        </div>
+        <div class="demo-actions">
+          <a class="button primary" href="https://restaurant-analytics-platform-7week.streamlit.app/" target="_blank" rel="noopener">Open Data Uploader &#8599;</a>
+          <a class="button secondary" href="https://github.com/7weeek/Restaurant-Analytics-Platform" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </div>
     </section>
@@ -319,8 +342,8 @@
 
   <footer>
     <div><span class="brand-mark small">R</span> RestaurantIQ</div>
-    <span>Restaurant Analytics & Business Intelligence Platform</span>
-    <span>Built as an end-to-end analytics case study.</span>
+    <span>Restaurant Analytics &amp; Business Intelligence Platform</span>
+    <span>End-to-end: Streamlit &middot; Neon PostgreSQL &middot; Power BI</span>
   </footer>
 
   <script>
@@ -328,9 +351,9 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.08 });
+    }, { threshold: 0.07 });
 
-    document.querySelectorAll('.section, .dark-section, .analytics-card, .data-card, .arch-node').forEach(el => observer.observe(el));
+    document.querySelectorAll('.section, .dark-section, .analytics-card, .data-card, .arch-node, .app-card').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
